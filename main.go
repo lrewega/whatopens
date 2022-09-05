@@ -12,7 +12,7 @@ func canonicalize(p string) (*url.URL, error) {
 	if err != nil {
 		return nil, err
 	}
-	base, err := url.Parse(cwd)
+	base, err := url.Parse(cwd + "/")
 	base.Scheme = "file"
 	u, err := url.Parse(p)
 	if err != nil {
